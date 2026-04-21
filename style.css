@@ -115,14 +115,436 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Navigation Bar */
+nav {
+    background: #1e3c72;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: opacity 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+/* Section Titles */
+.section-title {
+    border-bottom: 3px solid #2a5298;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    color: #1e3c72;
+}
+
+/* Rules & Referee Content */
+.rule-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+.rule-card h3 {
+    margin-top: 0;
+    color: #2a5298;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Quiz Styles */
+.quiz-container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-top: 30px;
+}
+
+.question {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option-btn {
+    padding: 15px;
+    border: 2px solid #eef2f7;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.option-btn:hover {
+    background: #f8f9fa;
+    border-color: #2a5298;
+}
+
+.option-btn.correct {
+    background: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+}
+
+.option-btn.wrong {
+    background: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+}
+
+.result-area {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    display: none;
+    text-align: center;
+}
+
+/* Rule & History Cards */
+.rule-card, .history-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+    border-top: 4px solid #2a5298;
+    transition: transform 0.2s;
+}
+
+.rule-card:hover, .history-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Player/Legend Section */
+.legend-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.player-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #eef2f7;
+}
+
+.player-card .emoji {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.player-card h4 {
+    margin: 10px 0 5px 0;
+    color: #1e3c72;
+    font-size: 1.2rem;
+}
+
+.player-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.player-tag {
+    display: inline-block;
+    background: #eef2f7;
+    color: #2a5298;
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+/* Icon List */
+.icon-list {
+    list-style: none;
+    padding: 0;
+}
+
+.icon-list li {
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.icon-list li::before {
+    content: '⭐';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Skill Cards */
+.skill-card {
+    display: flex;
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.skill-icon {
+    background: #2a5298;
+    color: white;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+.skill-content {
+    padding: 20px 25px;
+    flex: 1;
+}
+
+.skill-content h3 {
+    margin: 0 0 10px 0;
+    color: #1e3c72;
+}
+
+.skill-point {
+    background: #fff3cd;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    border-left: 4px solid #ffc107;
+    margin-top: 10px;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #1e3c72;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    font-size: 1.5rem;
+    z-index: 100;
+}
+
+/* Progress Bar */
+.progress-container {
+    width: 100%;
+    height: 5px;
+    background: #ccc;
+    position: fixed;
+    top: 55px; /* 아래 nav 높이에 맞춰 조정 */
+    left: 0;
+    z-index: 1001;
+}
+
+.progress-bar {
+    height: 5px;
+    background: #ffc107;
+    width: 0%;
+}
+
+/* Position Grid */
+.position-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.pos-card {
+    background: #f1f4f9;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #1e3c72;
+}
+
+.pos-card h4 {
+    margin: 0 0 10px 0;
+    color: #1e3c72;
+}
+
+/* Dashboard Cards */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.dash-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s;
+    border: 1px solid #eef2f7;
+}
+
+.dash-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(30, 60, 114, 0.15);
+    border-color: #2a5298;
+}
+
+.dash-icon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.dash-card h3 {
+    margin: 10px 0;
+    color: #1e3c72;
+}
+
+.dash-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Checklist Styles */
+.checklist-container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.check-item:hover {
+    background: #f8f9fa;
+}
+
+.check-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.check-item.completed {
+    color: #888;
+    text-decoration: line-through;
+}
+
+.skill-category {
+    margin-top: 30px;
+    font-weight: 700;
+    color: #1e3c72;
+    border-left: 5px solid #ffc107;
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+/* Session Selection */
+.session-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.session-btn {
+    padding: 20px;
+    background: white;
+    border: 2px solid #eef2f7;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 700;
+    transition: all 0.2s;
+}
+
+.session-btn:hover {
+    border-color: #1e3c72;
+    background: #f1f4f9;
+}
+
+.session-btn.locked {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: #eee;
+}
+
+/* Submission Portal */
+.submission-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.status-done { background: #d4edda; color: #155724; }
+.status-wait { background: #f8d7da; color: #721c24; }
+
 @media (max-width: 600px) {
-    .timeline::before {
-        display: none;
-    }
-    .timeline-item {
+    .skill-card {
         flex-direction: column;
     }
-    .year {
-        margin-bottom: 10px;
+    .skill-icon {
+        width: 100%;
+        height: 60px;
+        font-size: 1.8rem;
     }
 }

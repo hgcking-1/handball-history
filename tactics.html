@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>핸드볼 경기 전술 - 핸드볼 수업</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html">🏠 홈</a>
+            <a href="history.html">역사</a>
+            <a href="rules.html">규칙</a>
+            <a href="skills.html">기술</a>
+            <a href="positions.html">포지션</a>
+            <a href="tactics.html">전술</a>
+            <a href="safety.html">안전</a>
+            <a href="faq.html">FAQ</a>
+            <a href="referee.html">심판</a>
+            <a href="study-guide.html">요약</a>
+            <a href="quiz.html">퀴즈</a>
+        </div>
+    </nav>
+    <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
+    <header>
+        <div class="container">
+            <h1> 전략의 승리, 핸드볼 전술</h1>
+            <p>팀워크를 통해 상대의 수비를 허물고 득점하는 방법을 배워봅시다</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="tactics-section">
+            <h2 class="section-title">수비 전술 (Defense Systems)</h2>
+            
+            <div class="rule-card">
+                <h3>🛡️ 6:0 수비</h3>
+                <p>모든 수비수가 골 에어리어 라인에 일렬로 서서 수비하는 가장 기본적인 형태입니다.</p>
+                <div class="skill-point"><strong>장점:</strong> 골대 정면이 매우 견고하며, 장신 선수가 많을 때 유리합니다.</div>
+            </div>
+
+            <div class="rule-card">
+                <h3>⚔️ 5:1 수비</h3>
+                <p>5명은 라인에 서고, 1명의 수비수가 앞으로 나가 상대의 핵심 공격수를 압박하는 전술입니다.</p>
+            </div>
+        </section>
+
+        <section class="tactics-section">
+            <h2 class="section-title">공격 전술 (Offense Systems)</h2>
+            
+            <div class="rule-card">
+                <h3>⚡ 속공 (Fast Break)</h3>
+                <p>상대의 공격 실패 직후, 수비가 정비되기 전에 빠르게 달려가 득점하는 기술입니다. 핸드볼 득점의 상당 부분이 속공에서 나옵니다.</p>
+            </div>
+
+            <div class="rule-card">
+                <h3>🔄 세트 오펜스 (Set Offense)</h3>
+                <p>수비가 정비된 상황에서 패스와 약속된 플레이(피벗 활용 등)를 통해 빈틈을 찾아 슛을 시도하는 전술입니다.</p>
+            </div>
+        </section>
+    </main>
+
+    <a href="#" class="back-to-top">▲</a>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          var scrolled = (winScroll / height) * 100;
+          document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2026 서울대학교사범대학부설여자중학교 핸드볼 수업 자료</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 성과 점검 - 핸드볼 수업</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html">🏠 홈</a>
+            <a href="history.html">역사</a>
+            <a href="rules.html">규칙</a>
+            <a href="skills.html">기술</a>
+            <a href="positions.html">포지션</a>
+            <a href="tactics.html">전술</a>
+            <a href="safety.html">안전</a>
+            <a href="checklist.html">나의 성과</a>
+            <a href="faq.html">FAQ</a>
+            <a href="referee.html">심판</a>
+            <a href="study-guide.html">요약</a>
+            <a href="quiz.html">퀴즈</a>
+        </div>
+    </nav>
+    <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
+
+    <header>
+        <div class="container">
+            <h1>✅ 나의 핸드볼 성과 점검</h1>
+            <p>오늘의 훈련 목표를 달성하고 실력을 기록해 보세요</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="checklist-container">
+            <h2 class="section-title">실기 능력 자가 진단</h2>
+            
+            <div class="skill-category">패스 & 캐치 (Pass & Catch)</div>
+            <label class="check-item"><input type="checkbox" data-id="c1"> 제자리에서 정확한 숄더 패스를 할 수 있다.</label>
+            <label class="check-item"><input type="checkbox" data-id="c2"> 가슴 높이에서 날아오는 공을 안전하게 캐치한다.</label>
+            <label class="check-item"><input type="checkbox" data-id="c3"> 이동하면서 동료에게 패스를 전달할 수 있다.</label>
+
+            <div class="skill-category">슛 (Shoot)</div>
+            <label class="check-item"><input type="checkbox" data-id="c4"> 스텝을 밟으며 골대를 향해 슛을 던질 수 있다.</label>
+            <label class="check-item"><input type="checkbox" data-id="c5"> 점프 슛 시 최고 타점에서 공을 던진다.</label>
+
+            <div class="skill-category">드리블 & 수비 (Dribble & Defense)</div>
+            <label class="check-item"><input type="checkbox" data-id="c6"> 상대 수비를 피해 낮은 드리블로 이동할 수 있다.</label>
+            <label class="check-item"><input type="checkbox" data-id="c7"> 6:0 수비 대형에서 자신의 자리를 지킬 수 있다.</label>
+            
+            <div style="margin-top: 30px; text-align: center;">
+                <p>체크한 내용은 브라우저에 자동으로 저장됩니다.</p>
+                <button onclick="clearChecklist()" style="padding: 10px 20px; background: #dc3545; color: white; border: none; border-radius: 5px; cursor: pointer;">기록 초기화</button>
+            </div>
+        </div>
+    </main>
+
+    <a href="#" class="back-to-top">▲</a>
+
+    <script>
+        // 진행바 스크립트
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          var scrolled = (winScroll / height) * 100;
+          document.getElementById("myBar").style.width = scrolled + "%";
+        }
+
+        // 체크리스트 저장/로드 스크립트
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        
+        // 로드
+        window.onload = () => {
+            checkboxes.forEach(cb => {
+                const saved = localStorage.getItem('hb-check-' + cb.dataset.id);
+                if (saved === 'true') {
+                    cb.checked = true;
+                    cb.parentElement.classList.add('completed');
+                }
+            });
+        };
+
+        // 저장 이벤트
+        checkboxes.forEach(cb => {
+            cb.onchange = () => {
+                localStorage.setItem('hb-check-' + cb.dataset.id, cb.checked);
+                if (cb.checked) {
+                    cb.parentElement.classList.add('completed');
+                } else {
+                    cb.parentElement.classList.remove('completed');
+                }
+            };
+        });
+
+        function clearChecklist() {
+            if(confirm('모든 기록을 초기화할까요?')) {
+                checkboxes.forEach(cb => {
+                    cb.checked = false;
+                    cb.parentElement.classList.remove('completed');
+                    localStorage.removeItem('hb-check-' + cb.dataset.id);
+                });
+            }
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2026 서울대학교사범대학부설여자중학교 핸드볼 수업 자료</p>
+    </footer>
+</body>
+</html>

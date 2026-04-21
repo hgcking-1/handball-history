@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>핸드볼 기초 기술 - 핸드볼 수업</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html">🏠 홈</a>
+            <a href="history.html">역사</a>
+            <a href="rules.html">규칙</a>
+            <a href="skills.html">기술</a>
+            <a href="positions.html">포지션</a>
+            <a href="tactics.html">전술</a>
+            <a href="safety.html">안전</a>
+            <a href="faq.html">FAQ</a>
+            <a href="referee.html">심판</a>
+            <a href="study-guide.html">요약</a>
+            <a href="quiz.html">퀴즈</a>
+        </div>
+    </nav>
+    <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
+    <header>
+        <div class="container">
+            <h1>🏃‍♂️ 핸드볼 기초 기술</h1>
+            <p>정확한 자세와 동작으로 핸드볼 실력을 키워봅시다</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="skills-section">
+            <h2 class="section-title">핸드볼의 기본, 패스와 캐치</h2>
+            
+            <div class="skill-card">
+                <div class="skill-icon">🎯</div>
+                <div class="skill-content">
+                    <h3>숄더 패스 (Shoulder Pass)</h3>
+                    <p>어깨 위에서 공을 던지는 가장 기본적이고 정확한 패스 방법입니다.</p>
+                    <div class="skill-point"><strong>Tip:</strong> 공을 던지는 반대쪽 발을 앞으로 내디디며 체중을 실어주세요.</div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">👐</div>
+                <div class="skill-content">
+                    <h3>캐치 (Catching)</h3>
+                    <p>양손을 가슴 높이로 들어 삼각형 모양을 만들며 공을 부드럽게 감싸 안습니다.</p>
+                    <div class="skill-point"><strong>Tip:</strong> 공이 손에 닿는 순간 팔을 몸쪽으로 살짝 당겨 충격을 흡수하세요.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-section">
+            <h2 class="section-title">승리를 결정짓는 슛</h2>
+            
+            <div class="skill-card">
+                <div class="skill-icon">🚀</div>
+                <div class="skill-content">
+                    <h3>점프 슛 (Jump Shoot)</h3>
+                    <p>높이 뛰어올라 수비수 위에서 공을 던지는 핸드볼의 꽃입니다.</p>
+                    <div class="skill-point"><strong>Tip:</strong> 최고 타점에서 슛을 쏘고, 착지할 때는 양발로 안전하게 내려오세요.</div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">⚡</div>
+                <div class="skill-content">
+                    <h3>스텝 슛 (Step Shoot)</h3>
+                    <p>달려오던 탄력을 그대로 이용해 강력하게 공을 던지는 기술입니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-section">
+            <h2 class="section-title">자유로운 이동, 드리블</h2>
+            <div class="skill-card">
+                <div class="skill-icon">🏀</div>
+                <div class="skill-content">
+                    <h3>낮은 드리블 & 높은 드리블</h3>
+                    <p>상대 수비가 가까울 때는 낮게, 빠르게 이동할 때는 높게 공을 튀깁니다.</p>
+                    <div class="skill-point"><strong>Tip:</strong> 손바닥이 아닌 손가락 마디로 공을 누르듯이 튀겨주세요.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a href="#" class="back-to-top">▲</a>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          var scrolled = (winScroll / height) * 100;
+          document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2026 서울대학교사범대학부설여자중학교 핸드볼 수업 자료</p>
+    </footer>
+</body>
+</html>

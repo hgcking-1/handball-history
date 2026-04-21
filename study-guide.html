@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>핸드볼 핵심 요약집 - 핸드볼 수업</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        @media print {
+            nav, .back-to-top, .print-btn { display: none !important; }
+            body { background: white; }
+            .container { max-width: 100%; margin: 0; padding: 0; }
+            .rule-card { box-shadow: none; border: 1px solid #ccc; break-inside: avoid; }
+            header { padding: 20px 0; background: #eee !important; color: black !important; }
+        }
+        .print-btn {
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .print-btn:hover { background: #218838; }
+    </style>
+</head>
+<body>
+    <nav>
+        <nav>
+            <div class="container">
+                <a href="index.html">🏠 홈</a>
+                <a href="history.html">역사</a>
+                <a href="rules.html">규칙</a>
+                <a href="skills.html">기술</a>
+                <a href="positions.html">포지션</a>
+                <a href="tactics.html">전술</a>
+                <a href="safety.html">안전</a>
+                <a href="faq.html">FAQ</a>
+                <a href="referee.html">심판</a>
+                <a href="study-guide.html">요약</a>
+                <a href="quiz.html">퀴즈</a>
+            </div>
+        </nav>
+    <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
+    <header>
+        <div class="container">
+            <h1>📑 핸드볼 핵심 요약집</h1>
+            <p>수업 시간에 배운 핵심 내용을 한 페이지로 정리했습니다</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <button onclick="window.print()" class="print-btn">🖨️ 인쇄하여 보관하기</button>
+
+        <section class="summary-section">
+            <h2 class="section-title">1. 경기 규칙 및 장비</h2>
+            <div class="rule-card">
+                <ul class="icon-list">
+                    <li><strong>경기 인원:</strong> 한 팀당 7명 (골키퍼 1명 포함)</li>
+                    <li><strong>경기 시간:</strong> 전·후반 25분 (중학교 기준), 휴식 10분</li>
+                    <li><strong>핵심 규칙:</strong> 3보 이내 걷기, 3초 이내 공 소유, 풋볼 금지</li>
+                    <li><strong>장비:</strong> 여중부 1호공 사용, 가로 40m x 세로 20m 경기장</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="summary-section">
+            <h2 class="section-title">2. 기초 기술 요점</h2>
+            <div class="rule-card">
+                <ul class="icon-list">
+                    <li><strong>패스:</strong> 숄더 패스가 기본, 반대쪽 발을 앞으로 디디며 던짐</li>
+                    <li><strong>캐치:</strong> 가슴 높이에서 삼각형 모양을 만들어 충격 흡수하며 받기</li>
+                    <li><strong>슛:</strong> 점프 슛(최고 타점), 스텝 슛(달리는 탄력 이용)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="summary-section">
+            <h2 class="section-title">3. 경기 전술 및 심판법</h2>
+            <div class="rule-card">
+                <ul class="icon-list">
+                    <li><strong>수비:</strong> 6:0(일렬 수비), 5:1(공격수 압박 수비)</li>
+                    <li><strong>공격:</strong> 속공(빠른 역습), 세트 오펜스(약속된 플레이)</li>
+                    <li><strong>징계:</strong> 경고(노랑), 2분 퇴장, 실격(빨강 - 2분 퇴장 3번 시)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="summary-section">
+            <h2 class="section-title">4. 안전 수칙</h2>
+            <div class="rule-card">
+                <p>충분한 준비운동(발목, 무릎, 어깨)을 하고, 점프 후에는 반드시 양발로 착지하여 발목 부상을 예방합니다. 경기 전 장신구는 모두 제거합니다.</p>
+            </div>
+        </section>
+    </main>
+
+    <a href="#" class="back-to-top">▲</a>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          var scrolled = (winScroll / height) * 100;
+          document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2026 서울대학교사범대학부설여자중학교 핸드볼 수업 자료</p>
+    </footer>
+</body>
+</html>

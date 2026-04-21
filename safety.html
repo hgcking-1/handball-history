@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부상 방지 및 스트레칭 - 핸드볼 수업</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html">🏠 홈</a>
+            <a href="history.html">역사</a>
+            <a href="rules.html">규칙</a>
+            <a href="skills.html">기술</a>
+            <a href="positions.html">포지션</a>
+            <a href="tactics.html">전술</a>
+            <a href="safety.html">안전</a>
+            <a href="faq.html">FAQ</a>
+            <a href="referee.html">심판</a>
+            <a href="study-guide.html">요약</a>
+            <a href="quiz.html">퀴즈</a>
+        </div>
+    </nav>
+    <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
+    <header>
+        <div class="container">
+            <h1>🩹 안전한 핸드볼 수업</h1>
+            <p>즐거운 체육 시간의 시작은 철저한 준비 운동과 안전 수칙 준수입니다</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="safety-section">
+            <h2 class="section-title">필수 준비 운동 (Dynamic Stretching)</h2>
+            <div class="rule-card">
+                <h3>🦶 발목과 무릎 회전</h3>
+                <p>핸드볼은 방향 전환이 잦은 운동입니다. 발목과 무릎을 충분히 돌려 관절을 부드럽게 합니다.</p>
+            </div>
+            <div class="rule-card">
+                <h3>🙆 어깨와 팔꿈치 스트레칭</h3>
+                <p>공을 던지는 동작이 많으므로 어깨 회전근과 팔꿈치 인대를 충분히 이완시켜야 합니다.</p>
+                <div class="skill-point"><strong>주의:</strong> 반동을 주지 말고 천천히 근육을 늘려주세요.</div>
+            </div>
+        </section>
+
+        <section class="safety-section">
+            <h2 class="section-title">자주 발생하는 부상과 예방법</h2>
+            <div class="rule-card">
+                <h3>⚠️ 발목 염좌 (Sprain)</h3>
+                <p>점프 후 착지할 때 가장 많이 발생합니다. 반드시 양발로 착지하는 습관을 들여야 합니다.</p>
+            </div>
+            <div class="rule-card">
+                <h3>⚠️ 손가락 부상</h3>
+                <p>캐치할 때 손가락 끝으로 공을 받으면 손가락이 뒤로 꺾일 수 있습니다. 손바닥 전체로 공을 감싸세요.</p>
+            </div>
+        </section>
+
+        <section class="info-card">
+            <h2>📢 안전 수칙</h2>
+            <ul>
+                <li>경기 전 장신구(목걸이, 귀걸이 등)는 반드시 제거합니다.</li>
+                <li>운동화 끈이 풀리지 않았는지 수시로 확인합니다.</li>
+                <li>몸에 이상이 느껴지면 즉시 선생님께 알립니다.</li>
+            </ul>
+        </section>
+    </main>
+
+    <a href="#" class="back-to-top">▲</a>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          var scrolled = (winScroll / height) * 100;
+          document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2026 서울대학교사범대학부설여자중학교 핸드볼 수업 자료</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>핸드볼 포지션과 역할 - 핸드볼 수업</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html">🏠 홈</a>
+            <a href="history.html">역사</a>
+            <a href="rules.html">규칙</a>
+            <a href="skills.html">기술</a>
+            <a href="positions.html">포지션</a>
+            <a href="tactics.html">전술</a>
+            <a href="safety.html">안전</a>
+            <a href="faq.html">FAQ</a>
+            <a href="referee.html">심판</a>
+            <a href="study-guide.html">요약</a>
+            <a href="quiz.html">퀴즈</a>
+        </div>
+    </nav>
+    <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
+
+    <header>
+        <div class="container">
+            <h1>🏃‍♀️ 핸드볼 포지션과 역할</h1>
+            <p>팀의 승리를 위해 각자가 맡은 위치에서 최선을 다해봅시다</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="positions-section">
+            <h2 class="section-title">코트 위의 전사들</h2>
+            <div class="position-grid">
+                <div class="pos-card">
+                    <h4>센터백 (Center Back)</h4>
+                    <p>팀의 사령관! 공격 전술을 지시하고 패스를 배급하는 플레이메이커입니다.</p>
+                </div>
+                <div class="pos-card">
+                    <h4>레프트/라이트백 (LB/RB)</h4>
+                    <p>강력한 중거리 슛을 담당하며 수비를 뚫고 득점하는 주포입니다.</p>
+                </div>
+                <div class="pos-card">
+                    <h4>레프트/라이트윙 (LW/RW)</h4>
+                    <p>빠른 발을 이용해 코너에서 슛을 시도하거나 속공의 핵심 역할을 합니다.</p>
+                </div>
+                <div class="pos-card">
+                    <h4>피벗 (Pivot)</h4>
+                    <p>수비 라인 사이에서 몸싸움을 하며 공간을 만들고 슛을 시도합니다.</p>
+                </div>
+                <div class="pos-card">
+                    <h4>골키퍼 (GK)</h4>
+                    <p>최후의 보루! 상대의 슛을 막아내고 속공의 시작점 역할을 합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-card">
+            <h2>💡 포지션 결정 팁</h2>
+            <p>자신에게 맞는 포지션을 찾아보세요!</p>
+            <ul>
+                <li><strong>슛 능력이 좋다면?</strong> 백 플레이어</li>
+                <li><strong>몸싸움에 자신 있고 공간을 잘 본다면?</strong> 피벗</li>
+                <li><strong>달리기가 빠르고 민첩하다면?</strong> 윙 플레이어</li>
+                <li><strong>반사 신경이 뛰어나고 용기가 있다면?</strong> 골키퍼</li>
+            </ul>
+        </section>
+    </main>
+
+    <a href="#" class="back-to-top">▲</a>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          var scrolled = (winScroll / height) * 100;
+          document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2026 서울대학교사범대학부설여자중학교 핸드볼 수업 자료</p>
+    </footer>
+</body>
+</html>

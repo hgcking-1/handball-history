@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자주 묻는 질문(FAQ) - 핸드볼 수업</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html">🏠 홈</a>
+            <a href="history.html">역사</a>
+            <a href="rules.html">규칙</a>
+            <a href="skills.html">기술</a>
+            <a href="positions.html">포지션</a>
+            <a href="tactics.html">전술</a>
+            <a href="safety.html">안전</a>
+            <a href="faq.html">FAQ</a>
+            <a href="referee.html">심판</a>
+            <a href="study-guide.html">요약</a>
+            <a href="quiz.html">퀴즈</a>
+        </div>
+    </nav>
+    <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
+    <header>
+        <div class="container">
+            <h1>🤔 자주 묻는 질문 (FAQ)</h1>
+            <p>핸드볼에 대해 궁금한 점들을 시원하게 해결해 드립니다</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="faq-section">
+            <div class="rule-card">
+                <h3>Q. 핸드볼 공에는 왜 끈적거리는 것을 바르나요?</h3>
+                <p><strong>A.</strong> 그것은 '핸드볼 왁스(Resin)'라고 합니다. 핸드볼은 한 손으로 공을 잡고 강하게 던져야 하는 운동이기 때문에, 공이 손에서 미끄러지지 않게 하여 더 정확한 패스와 강력한 슛을 하기 위해 사용합니다.</p>
+            </div>
+
+            <div class="rule-card">
+                <h3>Q. 슛을 할 때 골 에어리어 안에 들어가면 안 되나요?</h3>
+                <p><strong>A.</strong> 라인을 밟거나 안으로 발이 먼저 닿으면 반칙입니다. 하지만 <strong>공중에서 슛을 쏘고 난 뒤에</strong> 골 에어리어 안으로 착지하는 것은 허용됩니다. 그래서 선수들이 멋지게 날아오르며 슛을 하는 것이죠!</p>
+            </div>
+
+            <div class="rule-card">
+                <h3>Q. 공을 발로 차면 어떻게 되나요?</h3>
+                <p><strong>A.</strong> '풋볼(Foot ball)' 반칙이 선언되어 상대 팀에게 공격권이 넘어갑니다. 핸드볼은 골키퍼를 제외하고는 무릎 아래 부위에 공이 닿으면 안 되는 경기입니다.</p>
+            </div>
+
+            <div class="rule-card">
+                <h3>Q. 경기가 무승부로 끝나면 어떻게 하나요?</h3>
+                <p><strong>A.</strong> 리그전에서는 무승부로 기록되기도 하지만, 토너먼트처럼 승부를 내야 할 때는 연장전을 진행하거나 '7m 던지기(축구의 승부차기)'를 통해 승패를 결정합니다.</p>
+            </div>
+
+            <div class="rule-card">
+                <h3>Q. 포지션은 어떻게 정해지나요?</h3>
+                <p><strong>A.</strong> 키가 크고 힘이 좋은 선수는 중앙(피벗/백), 발이 빠르고 날렵한 선수는 양 끝(윙)을 맡는 경우가 많습니다. 하지만 가장 중요한 것은 자신의 장점을 살려 팀과 조화를 이루는 것입니다!</p>
+            </div>
+        </section>
+    </main>
+
+    <a href="#" class="back-to-top">▲</a>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          var scrolled = (winScroll / height) * 100;
+          document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2026 서울대학교사범대학부설여자중학교 핸드볼 수업 자료</p>
+    </footer>
+</body>
+</html>

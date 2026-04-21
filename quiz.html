@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>핸드볼 단계별 학습 퀴즈 (20단계)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html">🏠 홈</a>
+            <a href="quiz.html">퀴즈</a>
+            <a href="submit.html">과제 제출</a>
+        </div>
+    </nav>
+    <main class="container">
+        <h1 class="section-title">핸드볼 20단계 마스터 퀴즈</h1>
+        <div id="session-grid" class="session-grid"></div>
+        
+        <div id="quiz-box" style="display:none;" class="quiz-container">
+            <h2 id="q-title"></h2>
+            <p class="question" id="q-text"></p>
+            <div id="options" class="options"></div>
+            <button id="show-ans" onclick="showAnswer()" class="option-btn" style="margin-top:20px; background:#eef2f7;">정답 보기</button>
+            <div id="ans-area" style="display:none; margin-top:10px; color:#d9534f; font-weight:bold;"></div>
+        </div>
+    </main>
+
+    <script>
+        const quizDB = [
+            {t:"1. 기원", q:"핸드볼의 원형 고대 종목은?", o:["우라니아", "축구"], a:0},
+            {t:"2. 역사", q:"한국 여핸 금메달 대회는?", o:["LA", "서울"], a:1},
+            {t:"3. 규격", q:"경기장 가로 길이는?", o:["20m", "40m"], a:1},
+            {t:"4. 인원", q:"한 팀 인원은?", o:["6명", "7명"], a:1},
+            {t:"5. 패스", q:"가장 기본 패스는?", o:["숄더", "바운드"], a:0},
+            {t:"6. 캐치", q:"공 받을 때 손 모양은?", o:["삼각형", "주먹"], a:0},
+            {t:"7. 슛", q:"최고 타점 슛은?", o:["점프", "스텝"], a:0},
+            {t:"8. 규칙", q:"3보 이내 걷기 규칙은?", o:"O", a:0},
+            {t:"9. 포지션", q:"플레이메이커는?", o:["센터백", "윙"], a:0},
+            {t:"10. 포지션", q:"최후의 보루는?", o:["피벗", "골키퍼"], a:1},
+            {t:"11. 수비", q:"일렬 수비 대형은?", o:["5:1", "6:0"], a:1},
+            {t:"12. 전술", q:"상대 역습 전술은?", o:["속공", "지공"], a:0},
+            {t:"13. 심판", q:"상대 부딪히는 반칙은?", o:["차징", "푸싱"], a:0},
+            {t:"14. 징계", q:"경고 카드는?", o:["노랑", "빨강"], a:0},
+            {t:"15. 안전", q:"착지 시 권장 방법은?", o:["한발", "양발"], a:1},
+            {t:"16. 용어", q:"상대 수비 사이는?", o:["피벗", "윙"], a:0},
+            {t:"17. 규칙", q:"무릎 아래 닿으면?", o:["풋볼", "오버스텝"], a:0},
+            {t:"18. 슛", q:"달리는 탄력 이용슛은?", o:["점프", "스텝"], a:1},
+            {t:"19. 시간", q:"전후반 시간은?", o:["25분", "30분"], a:0},
+            {t:"20. 종합", q:"왁스 사용 이유는?", o:["미끄럼방지", "공 보호"], a:0}
+        ];
+
+        function init() {
+            const grid = document.getElementById('session-grid');
+            for(let i=0; i<20; i++) {
+                const btn = document.createElement('button');
+                btn.className = 'session-btn';
+                btn.innerText = (i+1) + "단계";
+                btn.onclick = () => loadQ(i);
+                grid.appendChild(btn);
+            }
+        }
+        let currentQ = 0;
+
+        function loadQ(i) {
+            currentQ = i;
+            document.getElementById('session-grid').style.display='none';
+            document.getElementById('quiz-box').style.display='block';
+            document.getElementById('q-title').innerText = quizDB[i].t;
+            document.getElementById('q-text').innerText = quizDB[i].q;
+            document.getElementById('ans-area').style.display='none';
+            
+            const optCont = document.getElementById('options');
+            optCont.innerHTML = '';
+            quizDB[i].o.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn';
+                btn.innerText = opt;
+                btn.onclick = () => {
+                    if(idx === quizDB[i].a) {
+                        const code = 'HB-' + (i+1) + '-' + Math.random().toString(36).substring(2,6).toUpperCase();
+                        localStorage.setItem('hb-code-'+i, code);
+                        alert('정답입니다! 인증 코드 저장됨: ' + code);
+                    } else {
+                        alert('틀렸습니다. 다시 시도하세요.');
+                    }
+                };
+                optCont.appendChild(btn);
+            });
+        }
+        function showAnswer() { 
+            document.getElementById('ans-area').innerText = "정답: " + quizDB[currentQ].o[quizDB[currentQ].a]; 
+            document.getElementById('ans-area').style.display='block'; 
+        }
+        init();
+    </script>
+</body>
+</html>

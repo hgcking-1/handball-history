@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>핸드볼 심판법 - 핸드볼 수업</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html">🏠 홈</a>
+            <a href="history.html">역사</a>
+            <a href="rules.html">규칙</a>
+            <a href="skills.html">기술</a>
+            <a href="positions.html">포지션</a>
+            <a href="tactics.html">전술</a>
+            <a href="safety.html">안전</a>
+            <a href="faq.html">FAQ</a>
+            <a href="referee.html">심판</a>
+            <a href="study-guide.html">요약</a>
+            <a href="quiz.html">퀴즈</a>
+        </div>
+    </nav>
+    <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
+    <header>
+        <div class="container">
+            <h1>🏁 핸드볼 심판법</h1>
+            <p>공정한 경기를 위한 심판의 판정과 수신호를 배워봅시다</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="referee-section">
+            <h2 class="section-title">심판의 역할</h2>
+            <p>핸드볼 경기에는 2명의 심판(코트 심판, 골라인 심판)이 운영하며, 서로 위치를 교대하며 공정한 판정을 내립니다.</p>
+            
+            <div class="rule-card">
+                <h3>📢 주요 수신호</h3>
+                <p>심판은 말 대신 손동작으로 상황을 알립니다.</p>
+                <ul>
+                    <li><strong>득점</strong>: 팔을 높이 들어 올립니다.</li>
+                    <li><strong>오버 스텝/3초</strong>: 양손을 번갈아 가며 회전시킵니다.</li>
+                    <li><strong>7m 던지기</strong>: 팔을 대각선 위로 쭉 뻗어 골대를 가리킵니다.</li>
+                    <li><strong>타임아웃</strong>: 양손으로 'T'자 모양을 만듭니다.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="referee-section">
+            <h2 class="section-title">징계와 벌칙</h2>
+            <div class="rule-card">
+                <h3>🟨 경고 (Yellow Card)</h3>
+                <p>비신사적인 행위나 반칙이 반복될 때 부여됩니다. 팀당 최대 3개까지 받을 수 있습니다.</p>
+            </div>
+            <div class="rule-card">
+                <h3>⏱️ 2분간 퇴장 (2-Minute Suspension)</h3>
+                <p>심한 반칙을 했을 때 선수는 2분간 코트를 떠나야 하며, 해당 팀은 인원이 부족한 상태로 경기를 계속합니다.</p>
+            </div>
+            <div class="rule-card">
+                <h3>🟥 실격 (Red Card)</h3>
+                <p>매우 위험한 반칙이나 2분간 퇴장을 3번 받았을 때 부여됩니다. 해당 선수는 경기에서 완전히 제외됩니다.</p>
+            </div>
+        </section>
+    </main>
+
+    <a href="#" class="back-to-top">▲</a>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          var scrolled = (winScroll / height) * 100;
+          document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2026 서울대학교사범대학부설여자중학교 핸드볼 수업 자료</p>
+    </footer>
+</body>
+</html>
